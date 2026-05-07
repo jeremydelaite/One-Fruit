@@ -34,6 +34,16 @@
 - Création de la structure de dossiers (`app/`, `components/`, `data/`, `lib/`, `types/`)
 - Création du repo GitHub et premier commit
 
+## Types, données et première interface
+
+- Définition des types TypeScript dans `types/fruit.ts` (`DevilFruit`, `FruitType`, `FruitUser`...)
+- Création des données dans `data/fruits.ts` avec 5 premiers fruits (Gomu Gomu, Mera Mera, Hito Hito Nika, Yami Yami, Ope Ope)
+- Choix du statut `"en_circulation" | "acquis" | "inconnu"` pour représenter l'état d'un fruit dans l'univers
+- Création des fonctions utilitaires dans `lib/fruits.ts` (`getAllFruits`, `getFruitById`, `searchFruits`, `getFruitsWithoutSpoilers`...)
+- Création du composant `FruitCard` avec CSS Modules
+- Mise en place de la page d'accueil avec grille responsive
+- Choix d'architecture : CSS Modules plutôt que Tailwind inline pour la lisibilité
+
 ---
 
 ## Ressources
