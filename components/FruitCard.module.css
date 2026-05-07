@@ -1,0 +1,61 @@
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  height: 100%;
+  transition: border-color 0.15s, background 0.15s;
+  cursor: pointer;
+}
+
+.card:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.badge-paramecia {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.badge-zoan {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-logia {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.name-jp {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.name-fr {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.name-en {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 12px;
+  color: #6b7280;
+}
