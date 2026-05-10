@@ -44,6 +44,22 @@
 - Mise en place de la page d'accueil avec grille responsive
 - Choix d'architecture : CSS Modules plutôt que Tailwind inline pour la lisibilité
 
+### 10/05/2026 Direction artistique & interface
+
+- Recherche de DA pour le site
+- Définition de la palette complète et des variables CSS dans `globals.css` (couleurs, typographie, scrollbar)
+- Refonte de `FruitCard` avec la nouvelle DA
+- Création de la `Navbar` sticky avec logo, icône personnalisée et liens de navigation
+- - Réorganisation des `components/` en sous-dossiers (`layout/`, `fruits/`, `ui/`)
+- Création de la page de fiche détaillée `app/fruit/[id]/page.tsx` avec :
+  - Header centré (nom JP / FR / EN + badge type)
+  - Carte capacités
+  - Carte informations (statut, arc, chapitre, élément)
+  - Carte utilisateurs avec badges "Actuel" et "⚡ Éveillé"
+- Création du composant `AkaToggle` (client component) : toggle spoiler affichant le vrai nom d'un fruit à partir d'un chapitre donné — utilisé pour le Gomu Gomu
+- Création du favicon `icon.png` avec fond transparent
+- Génération statique des pages fruits avec `generateStaticParams`
+
 ---
 
 ## Ressources

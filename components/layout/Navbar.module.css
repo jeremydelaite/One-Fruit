@@ -1,0 +1,64 @@
+.navbar {
+  background: var(--color-bg-secondary);
+  border-bottom: 1.5px solid var(--color-border-gold);
+  padding: 0 2rem;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoImage {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+}
+
+.logoText {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-on-dark);
+  letter-spacing: 0.02em;
+}
+
+.logoTextAccent {
+  color: var(--color-gold-light);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navLink {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--color-text-on-dark-muted);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s, background 0.15s;
+  border: 1px solid transparent;
+}
+
+.navLink:hover {
+  color: var(--color-text-on-dark);
+  background: var(--color-bg-tertiary);
+}
+
+.navLinkActive {
+  color: var(--color-gold-light);
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-border-gold-subtle);
+}

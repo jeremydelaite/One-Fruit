@@ -6,6 +6,7 @@ export type FruitUser = {
   name: string
   nameEn: string
   isCurrent: boolean
+  isAwakened: boolean
   chapter?: number
 }
 
@@ -23,16 +24,20 @@ export type FruitAppearance = {
 export type DevilFruit = {
   id: string
   names: FruitNames
+  aka?: {
+    names: FruitNames
+    revealedChapter: number
+    spoiler: boolean
+  }
   type: FruitType
   zoanSubtype: ZoanSubtype
   element?: string
-  status: "en_circulation" | "acquis" | "inconnu"
+  status: "Possédé" | "Non-possédé"
   users: FruitUser[]
   abilities: {
     fr: string
     en: string
   }
   firstAppearance: FruitAppearance
-  isAwakened: boolean
   spoiler: boolean
 }

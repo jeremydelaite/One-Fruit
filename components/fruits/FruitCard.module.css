@@ -1,0 +1,84 @@
+.card {
+  background: var(--color-parchment);
+  border: 1.5px solid var(--color-border-gold);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  height: 100%;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  background: var(--color-parchment-dark);
+  border-color: var(--color-gold-light);
+}
+
+/* Badge type */
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 99px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: var(--font-sans);
+  letter-spacing: 0.03em;
+}
+
+.badgeLogia {
+  background: var(--color-logia-bg);
+  color: var(--color-logia-text);
+}
+
+.badgeZoan {
+  background: var(--color-zoan-bg);
+  color: var(--color-zoan-text);
+}
+
+.badgeParamecia {
+  background: var(--color-paramecia-bg);
+  color: var(--color-paramecia-text);
+}
+
+/* Noms */
+.nameJp {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-ink-primary);
+  margin-bottom: 4px;
+}
+
+.nameFr {
+  font-size: 13px;
+  color: var(--color-ink-secondary);
+  margin-bottom: 2px;
+  font-style: italic;
+}
+
+.nameEn {
+  font-size: 11px;
+  color: var(--color-ink-tertiary);
+}
+
+/* Footer */
+.divider {
+  height: 1px;
+  background: var(--color-border-gold-subtle);
+  margin: 10px 0;
+}
+
+.user {
+  font-size: 12px;
+  color: var(--color-ink-secondary);
+  font-family: var(--font-sans);
+}
+
+.userLabel {
+  font-size: 10px;
+  color: var(--color-ink-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}

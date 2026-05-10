@@ -1,1 +1,98 @@
 @import "tailwindcss";
+
+/* COULEURS */
+:root {
+  /* Fonds */
+  --color-bg-primary: #1a0f05;
+  --color-bg-secondary: #2d1a0a;
+  --color-bg-tertiary: #3d2a10;
+
+  /* Parchemin */
+  --color-parchment: #f5e6c8;
+  --color-parchment-dark: #e8d5a3;
+  --color-parchment-deeper: #d4c190;
+
+  /* Or */
+  --color-gold: #8b6914;
+  --color-gold-light: #c4a35a;
+  --color-gold-bright: #e8c460;
+
+  /* Texte sur parchemin */
+  --color-ink-primary: #2d1a0a;
+  --color-ink-secondary: #6b3a1a;
+  --color-ink-tertiary: #9a6040;
+
+  /* Texte sur fond sombre */
+  --color-text-on-dark: #e8d5a3;
+  --color-text-on-dark-muted: #8b6914;
+
+  /* Badges par type */
+  --color-logia-bg: #8b6914;
+  --color-logia-text: #f5e6c8;
+  --color-zoan-bg: #2d5a1a;
+  --color-zoan-text: #d4f0c0;
+  --color-paramecia-bg: #3a1a5a;
+  --color-paramecia-text: #e0c8f8;
+
+  /* Bordures */
+  --color-border-gold: #8b6914;
+  --color-border-gold-subtle: #8b691444;
+
+  /* Rayons */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Typographie */
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: system-ui, -apple-system, sans-serif;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-on-dark);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  /* Texture subtile */
+  background-image: radial-gradient(
+    ellipse at top,
+    #2d1a0a 0%,
+    #1a0f05 60%
+  );
+}
+
+/* TYPOGRAPHIE */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--color-text-on-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 99px;
+}

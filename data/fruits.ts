@@ -9,15 +9,25 @@ export const fruits: DevilFruit[] = [
       english: "Gum-Gum Fruit",
       french: "Fruit du Caoutchouc",
     },
+    aka: {
+      names: {
+        japanese: "Hito Hito no Mi, Model: Nika",
+        english: "Human-Human Fruit, Model: Nika",
+        french: "Fruit Humain, Modèle : Nika",
+      },
+      revealedChapter: 1044,
+      spoiler: true,
+    },
     type: "Paramecia",
     zoanSubtype: null,
     element: "Caoutchouc",
-    status: "acquis",
+    status: "Possédé",
     users: [
       {
         name: "Monkey D. Luffy",
         nameEn: "Monkey D. Luffy",
         isCurrent: true,
+        isAwakened: true,
         chapter: 1,
       },
     ],
@@ -26,7 +36,6 @@ export const fruits: DevilFruit[] = [
       en: "Transforms the body into rubber, making the user immune to blunt attacks and able to stretch their limbs infinitely.",
     },
     firstAppearance: { chapter: 1, arc: "Romance Dawn" },
-    isAwakened: true,
     spoiler: false,
   },
   {
@@ -39,18 +48,20 @@ export const fruits: DevilFruit[] = [
     type: "Logia",
     zoanSubtype: null,
     element: "Feu",
-    status: "acquis",
+    status: "Possédé",
     users: [
       {
         name: "Portgas D. Ace",
         nameEn: "Portgas D. Ace",
         isCurrent: false,
+        isAwakened: false,
         chapter: 159,
       },
       {
         name: "Sabo",
         nameEn: "Sabo",
         isCurrent: true,
+        isAwakened: false,
         chapter: 731,
       },
     ],
@@ -59,35 +70,7 @@ export const fruits: DevilFruit[] = [
       en: "Allows the user to create, control and transform into fire at will.",
     },
     firstAppearance: { chapter: 71, arc: "Loguetown" },
-    isAwakened: false,
     spoiler: false,
-  },
-  {
-    id: "hito-hito-no-mi-nika",
-    names: {
-      japanese: "Hito Hito no Mi, Model: Nika",
-      english: "Human-Human Fruit, Model: Nika",
-      french: "Fruit Humain, Modèle : Nika",
-    },
-    type: "Zoan",
-    zoanSubtype: "Mythique",
-    element: null,
-    status: "acquis",
-    users: [
-      {
-        name: "Monkey D. Luffy",
-        nameEn: "Monkey D. Luffy",
-        isCurrent: true,
-        chapter: 1044,
-      },
-    ],
-    abilities: {
-      fr: "Confère les pouvoirs du dieu du soleil Nika, transformant le corps en caoutchouc avec une liberté absolue et une puissance illimitée.",
-      en: "Grants the powers of the sun god Nika, turning the body to rubber with absolute freedom and limitless power.",
-    },
-    firstAppearance: { chapter: 1044, arc: "Wano" },
-    isAwakened: true,
-    spoiler: true,
   },
   {
     id: "yami-yami-no-mi",
@@ -99,12 +82,13 @@ export const fruits: DevilFruit[] = [
     type: "Logia",
     zoanSubtype: null,
     element: "Ténèbres",
-    status: "acquis",
+    status: "Possédé",
     users: [
       {
         name: "Marshall D. Teach",
         nameEn: "Marshall D. Teach",
         isCurrent: true,
+        isAwakened: false,
         chapter: 440,
       },
     ],
@@ -113,7 +97,6 @@ export const fruits: DevilFruit[] = [
       en: "Controls darkness and gravity, capable of nullifying other Devil Fruit powers on contact.",
     },
     firstAppearance: { chapter: 440, arc: "Impel Down" },
-    isAwakened: false,
     spoiler: false,
   },
   {
@@ -126,12 +109,13 @@ export const fruits: DevilFruit[] = [
     type: "Paramecia",
     zoanSubtype: null,
     element: "Espace opératoire",
-    status: "acquis",
+    status: "Possédé",
     users: [
       {
         name: "Trafalgar D. Water Law",
         nameEn: "Trafalgar D. Water Law",
         isCurrent: true,
+        isAwakened: true,
         chapter: 498,
       },
     ],
@@ -140,7 +124,6 @@ export const fruits: DevilFruit[] = [
       en: "Creates an operating sphere in which the user can manipulate everything inside, moving organs and bodies at will.",
     },
     firstAppearance: { chapter: 498, arc: "Sabaody" },
-    isAwakened: false,
     spoiler: false,
   },
 ]

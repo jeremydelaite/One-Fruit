@@ -1,5 +1,5 @@
 import { getAllFruits } from "@/lib/fruits"
-import FruitCard from "@/components/FruitCard"
+import FruitCard from "@/components/fruits/FruitCard"
 import styles from "./page.module.css"
 
 export default function Home() {
