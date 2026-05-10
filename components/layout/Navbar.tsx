@@ -3,14 +3,18 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
+import { useLang } from "@/lib/LangContext"
+import LangToggle from "@/components/ui/LangToggle"
 import styles from "./Navbar.module.css"
 
-const links = [
-  { href: "/", label: "Fruits" },
-]
 
 export default function Navbar() {
   const pathname = usePathname()
+  const { t } = useLang()
+
+  const links = [
+    { href: "/", label: t("nav_fruits") },
+  ]
 
   return (
     <nav className={styles.navbar}>
@@ -23,8 +27,7 @@ export default function Navbar() {
           className={styles.logoImage}
         />
         <span className={styles.logoText}>
-          Devil Fruit{" "}
-          <span className={styles.logoTextAccent}>Encyclopedia</span>
+          {t("home_title")}
         </span>
       </Link>
 
@@ -38,6 +41,7 @@ export default function Navbar() {
             {link.label}
           </Link>
         ))}
+        <LangToggle />
       </div>
     </nav>
   )

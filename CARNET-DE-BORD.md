@@ -17,7 +17,7 @@
 ## Fonctionnalités prévues
  
 - [ ] Liste complète des Fruits du Démon avec filtres (Paramecia / Zoan / Logia)
-- [ ] Fiche détaillée par fruit (nom JP / EN / FR, utilisateurs, pouvoirs, faiblesses)
+- [ ] Fiche détaillée par fruit (nom JP / EN / FR, utilisateurs, pouvoirs)
 - [ ] Recherche en temps réel
 - [ ] Bilingue FR / EN
 - [ ] Mode sans spoiler
@@ -59,6 +59,15 @@
 - Création du composant `AkaToggle` (client component) : toggle spoiler affichant le vrai nom d'un fruit à partir d'un chapitre donné — utilisé pour le Gomu Gomu
 - Création du favicon `icon.png` avec fond transparent
 - Génération statique des pages fruits avec `generateStaticParams`
+
+## Système de traduction FR/EN
+
+- Création de `lib/i18n.ts` : toutes les traductions FR/EN centralisées (navbar, page d'accueil, fiche détaillée, statuts, AkaToggle)
+- Création de `lib/LangContext.tsx` : Context React avec `useSyncExternalStore` + `localStorage` pour persister le choix de langue
+- Création du composant `LangToggle` dans `components/ui/` : bouton FR/EN dans la navbar
+- Branchement de `t()` sur la navbar (titre + liens)
+- Branchement de `t()` sur la page d'accueil
+- À faire : brancher `t()` sur la fiche détaillée + updater le `document.title` dynamiquement
 
 ---
 

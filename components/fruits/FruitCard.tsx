@@ -1,9 +1,11 @@
 import Link from "next/link"
 import type { DevilFruit } from "@/types/fruit"
+import type { Lang } from "@/lib/i18n"
 import styles from "./FruitCard.module.css"
 
 type Props = {
   fruit: DevilFruit
+  lang: Lang
 }
 
 const badgeStyles = {
@@ -12,7 +14,7 @@ const badgeStyles = {
   Paramecia: styles.badgeParamecia,
 }
 
-export default function FruitCard({ fruit }: Props) {
+export default function FruitCard({ fruit, lang }: Props) {
   const currentUser = fruit.users.find((u) => u.isCurrent) ?? fruit.users[0]
 
   return (
