@@ -1,0 +1,74 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 99px;
+    border: 1.5px solid var(--color-border-gold-subtle);
+    background: transparent;
+    color: var(--color-text-on-dark-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.btn:hover {
+    border-color: var(--color-gold);
+    color: var(--color-text-on-dark);
+}
+
+.active {
+    background: var(--color-gold);
+    color: var(--color-parchment);
+    border-color: var(--color-gold);
+}
+
+/* Couleurs par type */
+.btn.paramecia:hover,
+.btn.paramecia.active {
+    background: var(--color-paramecia-bg);
+    color: var(--color-paramecia-text);
+    border-color: var(--color-paramecia-bg);
+}
+
+.btn.zoan:hover,
+.btn.zoan.active {
+    background: var(--color-zoan-bg);
+    color: var(--color-zoan-text);
+    border-color: var(--color-zoan-bg);
+}
+
+.btn.logia:hover,
+.btn.logia.active {
+    background: var(--color-logia-bg);
+    color: var(--color-logia-text);
+    border-color: var(--color-logia-bg);
+}
+
+/* Sous-types Zoan */
+.subRow {
+    padding-left: 8px;
+    border-left: 2px solid var(--color-zoan-bg);
+}
+
+.subBtn {
+    font-size: 12px;
+    padding: 4px 12px;
+}
+
+.subActive {
+    background: var(--color-zoan-bg);
+    color: var(--color-zoan-text);
+    border-color: var(--color-zoan-bg);
+}

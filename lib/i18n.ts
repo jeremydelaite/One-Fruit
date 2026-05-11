@@ -36,9 +36,14 @@ export const translations = {
 
         // Sous type - Zoan
         zoan_classique: "Classique",
-        zoan_ancien: "Ancien",
+        zoan_antique: "Antique",
         zoan_mythique: "Mythique",
         zoan_artificiel: "Artificiel",
+
+        // Filtres
+        filter_paramecia: "Paramecia",
+        filter_zoan: "Zoan",
+        filter_logia: "Logia",
     },
     en: {
         // Navbar
@@ -75,9 +80,14 @@ export const translations = {
 
         // Sous type - Zoan
         zoan_classique: "Classic",
-        zoan_ancien: "Ancient",
+        zoan_antique: "Ancient",
         zoan_mythique: "Mythical",
         zoan_artificiel: "Artificial",
+
+        // Filtres
+        filter_paramecia: "Paramecia",
+        filter_zoan: "Zoan",
+        filter_logia: "Logia",
     },
 } as const
 

@@ -83,6 +83,25 @@
 - Renommage de `.subtitleEn` en `.subtitleSecondary` dans `FruitDetail` (nommage plus logique)
 - Nettoyage du prop `lang` devenu inutile dans `FruitCard` (géré en interne via `useLang`)
 
+## Filtres & recherche
+
+- Ajout de 5 nouveaux fruits dans `data/fruits.tsx` (pour ensuite tester correctement la recherche et les filtres)
+- Refonte de `lib/fruits.ts` : remplacement de `searchFruits` et `getFruitsByType` par `filterFruits` (query + type + zoanSubtype combinables)
+- Création du composant `SearchBar` : recherche en temps réel sur nom JP/FR/EN et utilisateurs FR/EN
+- Création du composant `FilterBar` : filtres par type (Paramecia/Zoan/Logia) avec sous-filtres Zoan (Classique/Antique/Mythique/Artificiel) qui apparaissent dynamiquement
+- Compteur de résultats mis à jour en temps réel
+- Tout le système bilingue FR/EN
+
+## Prochaines étapes 
+
+- Mettre en place une 404 (à définir le style)
+- Message quand la recherche abouti à aucun fruit
+- Tester le responsive mobile/tablette
+- Ajout de fruits, définir la méthode d'ajout (création d'une API ???)
+- Etoffer la card du spoiler du Gum Gum SPOILER
+- Ajout d'un mode spoiler dans la recherche
+- title dynamique avec nom du fruit 
+- Page utilisateurs de fruit du démon ? 
 
 ---
 
