@@ -77,6 +77,13 @@
 - Ajout du fruit de Chopper : Hito Hito no Mi
 - Correction casse `Logia` dans `badgeStyles` (bug d'affichage badge)
 
+- Traduction des sous-types Zoan dans `i18n.ts`
+- Branchement de la traduction des sous-types dans `FruitCard` et `FruitDetail`
+- Correction des noms FR des fruits dans `data/fruits.ts`
+- Renommage de `.subtitleEn` en `.subtitleSecondary` dans `FruitDetail` (nommage plus logique)
+- Nettoyage du prop `lang` devenu inutile dans `FruitCard` (géré en interne via `useLang`)
+
+
 ---
 
 ## Ressources

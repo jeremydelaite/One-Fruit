@@ -7,7 +7,7 @@ import styles from "./page.module.css"
 
 export default function Home() {
   const fruits = getAllFruits()
-  const { t, lang } = useLang()
+  const { t } = useLang()
 
   return (
     <main className={styles.main}>
@@ -15,7 +15,7 @@ export default function Home() {
       <p className={styles.subtitle}>{fruits.length} {t("home_subtitle")}</p>
       <div className={styles.grid}>
         {fruits.map((fruit) => (
-          <FruitCard key={fruit.id} fruit={fruit} lang={lang} />
+          <FruitCard key={fruit.id} fruit={fruit} />
         ))}
       </div>
     </main>

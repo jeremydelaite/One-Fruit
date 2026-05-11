@@ -2,6 +2,7 @@
 
 import { useLang } from "@/lib/LangContext"
 import type { DevilFruit } from "@/types/fruit"
+import type { TranslationKey } from "@/lib/i18n"
 import styles from "./FruitDetail.module.css"
 import AkaToggle from "./AkaToggle"
 
@@ -30,14 +31,15 @@ export default function FruitDetail({ fruit }: Props) {
             <div className={styles.header}>
                 <span className={`${styles.badge} ${badgeStyles[fruit.type]}`}>
                     {fruit.type}
-                    {fruit.zoanSubtype ? ` — ${fruit.zoanSubtype}` : ""}
+                    {fruit.zoanSubtype ? ` — ${t(`zoan_${fruit.zoanSubtype.toLowerCase()}` as TranslationKey)}`
+                        : ""}
                 </span>
                 <h1 className={styles.title}>{fruit.names.japanese}</h1>
                 <p className={styles.subtitle}>
                     {lang === "fr" ? fruit.names.french : fruit.names.english}
                 </p>
-                <p className={styles.subtitleEn}>
-                    {lang === "fr" ? fruit.names.english : fruit.names.japanese}
+                <p className={styles.subtitleSecondary}>
+                    {lang === "fr" ? fruit.names.english : fruit.names.french}
                 </p>
 
                 {fruit.aka && <AkaToggle aka={fruit.aka} />}

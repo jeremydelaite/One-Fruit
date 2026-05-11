@@ -7,13 +7,13 @@ export const fruits: DevilFruit[] = [
     names: {
       japanese: "Gomu Gomu no Mi",
       english: "Gum-Gum Fruit",
-      french: "Fruit du Caoutchouc",
+      french: "Fruit du Gum-Gum",
     },
     aka: {
       names: {
         japanese: "Hito Hito no Mi, Model: Nika",
         english: "Human-Human Fruit, Model: Nika",
-        french: "Fruit Humain, Modèle : Nika",
+        french: "Fruit de l'Humain, Modèle : Nika",
       },
       revealedChapter: 1044,
       spoiler: true,
@@ -43,7 +43,7 @@ export const fruits: DevilFruit[] = [
     names: {
       japanese: "Mera Mera no Mi",
       english: "Flame-Flame Fruit",
-      french: "Fruit du Feu",
+      french: "Pyro-Fruit",
     },
     type: "Logia",
     zoanSubtype: null,
@@ -104,7 +104,7 @@ export const fruits: DevilFruit[] = [
     names: {
       japanese: "Ope Ope no Mi",
       english: "Op-Op Fruit",
-      french: "Fruit de l'Opération",
+      french: "Fruit du bistouri",
     },
     type: "Paramecia",
     zoanSubtype: null,
@@ -131,7 +131,7 @@ export const fruits: DevilFruit[] = [
   names: {
     japanese: "Hito Hito no Mi",
     english: "Human-Human Fruit",
-    french: "Fruit Humain",
+    french: "Fruit de l'Humain",
   },
   type: "Zoan",
   zoanSubtype: "Classique",

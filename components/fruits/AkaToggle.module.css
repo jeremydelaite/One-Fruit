@@ -42,7 +42,7 @@
     margin-bottom: 4px;
 }
 
-.revealFr {
+.revealPrimary {
     font-family: var(--font-serif);
     font-style: italic;
     font-size: 0.95rem;
@@ -50,7 +50,7 @@
     margin-bottom: 2px;
 }
 
-.revealEn {
+.revealSecondary {
     font-size: 0.8rem;
     color: var(--color-ink-tertiary);
     margin-bottom: 8px;
