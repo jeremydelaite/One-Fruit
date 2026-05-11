@@ -1,0 +1,202 @@
+.main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 2rem 0 3rem;
+    border-bottom: 1.5px solid var(--color-border-gold-subtle);
+    margin-bottom: 2rem;
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 99px;
+    display: inline-block;
+    margin-bottom: 16px;
+    font-family: var(--font-sans);
+}
+
+.badgeLogia {
+    background: var(--color-logia-bg);
+    color: var(--color-logia-text);
+}
+
+.badgeZoan {
+    background: var(--color-zoan-bg);
+    color: var(--color-zoan-text);
+}
+
+.badgeParamecia {
+    background: var(--color-paramecia-bg);
+    color: var(--color-paramecia-text);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-on-dark);
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-gold-light);
+    margin-bottom: 4px;
+}
+
+.subtitleEn {
+    font-size: 0.9rem;
+    color: var(--color-text-on-dark-muted);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Cards */
+.card {
+    background: var(--color-parchment);
+    border: 1.5px solid var(--color-border-gold);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+}
+
+.cardFull {
+    grid-column: 1 / -1;
+}
+
+.cardTitle {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-ink-primary);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-border-gold-subtle);
+}
+
+.cardText {
+    font-size: 14px;
+    color: var(--color-ink-secondary);
+    line-height: 1.7;
+}
+
+/* Info rows */
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--color-border-gold-subtle);
+    font-size: 13px;
+}
+
+.infoRow:last-child {
+    border-bottom: none;
+}
+
+.infoLabel {
+    color: var(--color-ink-tertiary);
+    font-family: var(--font-sans);
+}
+
+.infoValue {
+    color: var(--color-ink-primary);
+    font-weight: 600;
+    font-family: var(--font-serif);
+}
+
+/* Utilisateurs */
+.usersList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.userChip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-parchment-dark);
+    border: 1px solid var(--color-border-gold);
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+}
+
+.userChipCurrent {
+    background: var(--color-bg-secondary);
+    border-color: var(--color-gold-light);
+}
+
+.userName {
+    font-size: 13px;
+    color: var(--color-ink-primary);
+    font-weight: 600;
+    font-family: var(--font-serif);
+}
+
+.userChipCurrent .userName {
+    color: var(--color-text-on-dark);
+}
+
+.userChapter {
+    font-size: 11px;
+    color: var(--color-ink-tertiary);
+    font-family: var(--font-sans);
+}
+
+.userCurrentBadge {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 99px;
+    background: var(--color-gold);
+    color: var(--color-parchment);
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.userBadges {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+}
+
+.userAwakenedBadge {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 99px;
+    background: #1a3a5a;
+    color: #7ab8e8;
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}

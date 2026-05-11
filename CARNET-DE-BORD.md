@@ -67,7 +67,15 @@
 - Création du composant `LangToggle` dans `components/ui/` : bouton FR/EN dans la navbar
 - Branchement de `t()` sur la navbar (titre + liens)
 - Branchement de `t()` sur la page d'accueil
-- À faire : brancher `t()` sur la fiche détaillée + updater le `document.title` dynamiquement
+
+### 11/05/2026 
+
+- Création du composant `FruitDetail` (client component) pour permettre l'usage de `useLang()` sur la fiche détaillée (Problème rencontré : les Server Components ne peuvent pas utiliser les hooks)
+- Branchement de `t()` sur tous les textes de la fiche détaillée (capacités, infos, utilisateurs)
+- Affichage du nom du fruit dans la bonne langue selon le contexte (FR/EN)
+- Création de `TitleUpdater` : met à jour `document.title` dynamiquement selon la langue active
+- Ajout du fruit de Chopper : Hito Hito no Mi
+- Correction casse `Logia` dans `badgeStyles` (bug d'affichage badge)
 
 ---
 

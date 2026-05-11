@@ -15,7 +15,7 @@ export const translations = {
         // Fiche détaillée 
         detail_abilities: "⚡ Capacités",
     detail_info: "📜 Informations",
-    detail_users: "👤 Utilisateurs connus",
+    detail_users: "👤 Utilisateur(s)",
     detail_status: "Statut",
     detail_chapter: "1ère apparition",
     detail_arc: "Arc",
@@ -47,7 +47,7 @@ en: {
     // Fiche détaillée
     detail_abilities: "⚡ Abilities",
     detail_info: "📜 Information",
-    detail_users: "👤 Known users",
+    detail_users: "👤 User(s)",
     detail_status: "Status",
     detail_chapter: "First appearance",
     detail_arc: "Arc",

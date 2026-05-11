@@ -1,14 +1,12 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
+import TitleUpdater from "@/components/layout/TItleUpdater"
 import { LangProvider } from "@/lib/LangContext"
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Devil Fruit Encyclopedia",
-    default: "Devil Fruit Encyclopedia",
-  },
-  description: "Encyclopédie interactive des Fruits du Démon de One Piece",
+  title: "Devil Fruit Encyclopedia",
+  description: "Encyclopédie des Fruits du Démon — One Piece",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -16,8 +14,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <body>
         <LangProvider>
-        <Navbar />
-        {children}
+          <TitleUpdater />
+          <Navbar />
+          {children}
         </LangProvider>
         </body>
     </html>

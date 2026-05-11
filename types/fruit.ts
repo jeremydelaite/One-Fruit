@@ -1,6 +1,6 @@
 export type FruitType = "Paramecia" | "Zoan" | "Logia"
 
-export type ZoanSubtype = "Naturel" | "Artificiel" | "Antique" | "Mythique" | null
+export type ZoanSubtype = "Classique" | "Artificiel" | "Antique" | "Mythique" | null
 
 export type FruitUser = {
   name: string
@@ -31,7 +31,10 @@ export type DevilFruit = {
   }
   type: FruitType
   zoanSubtype: ZoanSubtype
-  element?: string
+  element?: {
+    fr: string
+    en: string
+  }
   status: "Possédé" | "Non-possédé"
   users: FruitUser[]
   abilities: {

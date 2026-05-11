@@ -20,7 +20,7 @@ export const fruits: DevilFruit[] = [
     },
     type: "Paramecia",
     zoanSubtype: null,
-    element: "Caoutchouc",
+    element: { fr: "Caoutchouc", en: "Rubber" },
     status: "Possédé",
     users: [
       {
@@ -47,7 +47,7 @@ export const fruits: DevilFruit[] = [
     },
     type: "Logia",
     zoanSubtype: null,
-    element: "Feu",
+    element: { fr: "Feu", en: "Fire" },
     status: "Possédé",
     users: [
       {
@@ -81,7 +81,7 @@ export const fruits: DevilFruit[] = [
     },
     type: "Logia",
     zoanSubtype: null,
-    element: "Ténèbres",
+    element: { fr: "Ténèbres", en: "Darkness" },
     status: "Possédé",
     users: [
       {
@@ -108,7 +108,7 @@ export const fruits: DevilFruit[] = [
     },
     type: "Paramecia",
     zoanSubtype: null,
-    element: "Espace opératoire",
+    element: { fr: "Espace opératoire", en: "Operating Room" },
     status: "Possédé",
     users: [
       {
@@ -126,4 +126,32 @@ export const fruits: DevilFruit[] = [
     firstAppearance: { chapter: 498, arc: "Sabaody" },
     spoiler: false,
   },
+  {
+  id: "hito-hito-no-mi",
+  names: {
+    japanese: "Hito Hito no Mi",
+    english: "Human-Human Fruit",
+    french: "Fruit Humain",
+  },
+  type: "Zoan",
+  zoanSubtype: "Classique",
+  element: undefined,
+  status: "Possédé",
+  users: [
+    {
+      name: "Tony Tony Chopper",
+      nameEn: "Tony Tony Chopper",
+      isCurrent: true,
+      isAwakened: false,
+      chapter: 140,
+    },
+  ],
+  abilities: {
+    fr: "Permet à un animal de prendre forme humaine et d'accéder à des formes hybrides. Chopper utilise la Rumble Ball pour débloquer des formes supplémentaires.",
+    en: "Allows an animal to take human form and access hybrid forms. Chopper uses the Rumble Ball to unlock additional forms.",
+  },
+  firstAppearance: { chapter: 140, arc: "Drum Island" },
+  aka: undefined,
+  spoiler: false,
+},
 ]
