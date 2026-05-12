@@ -103,9 +103,15 @@
   - Animations rebond sur badge, titre, carte capacités et carte informations
 - Suppression de la mini-card de révélation dans `AkaToggle` — le bouton seul suffit
 
+### 404
+
+- Création de `app/not-found.tsx` : page 404
+- Fruit du démon inconnu généré par IA (Gemini) avec fond transparent (`404fruit.png`)
+- Animation de flottement sur l'image
+- Bouton retour vers l'encyclopédie
+
 ## Prochaines étapes 
 
-- Mettre en place une 404 (à définir le style)
 - Message quand la recherche abouti à aucun fruit
 - Tester le responsive mobile/tablette
 - Ajout de fruits, définir la méthode d'ajout (création d'une API ???)
