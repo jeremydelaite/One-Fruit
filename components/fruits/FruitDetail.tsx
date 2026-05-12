@@ -5,6 +5,7 @@ import type { DevilFruit } from "@/types/fruit"
 import type { TranslationKey } from "@/lib/i18n"
 import styles from "./FruitDetail.module.css"
 import AkaToggle from "./AkaToggle"
+import { AkaProvider, useAka } from "./AkaContext"
 
 type Props = {
     fruit: DevilFruit
@@ -16,8 +17,14 @@ const badgeStyles: Record<string, string> = {
     Paramecia: styles.badgeParamecia,
 }
 
-export default function FruitDetail({ fruit }: Props) {
+function FruitDetailContent({ fruit }: Props) {
     const { t, lang } = useLang()
+    const { revealed } = useAka()
+
+    const activeType = revealed && fruit.aka ? fruit.aka.type : fruit.type
+    const activeZoanSubtype = revealed && fruit.aka ? fruit.aka.zoanSubtype : fruit.zoanSubtype
+    const activeAbilities = revealed && fruit.aka ? fruit.aka.abilities : fruit.abilities
+    const badgeClass = badgeStyles[activeType] ?? ""
 
     const statusLabel = {
         "Possédé": t("status_possede"),
@@ -26,38 +33,54 @@ export default function FruitDetail({ fruit }: Props) {
 
     return (
         <main className={styles.main}>
-
-            {/* Header */}
             <div className={styles.header}>
-                <span className={`${styles.badge} ${badgeStyles[fruit.type]}`}>
-                    {fruit.type}
-                    {fruit.zoanSubtype ? ` — ${t(`zoan_${fruit.zoanSubtype.toLowerCase()}` as TranslationKey)}`
+
+                {/* Badge - change en fonction du revealed */}
+                <span
+                    className={`${styles.badge} ${badgeClass} ${revealed ? styles.badgeBounce : ""}`}
+                    key={revealed ? "aka" : "base"}
+                >
+                    {activeType}
+                    {activeZoanSubtype
+                        ? ` — ${t(`zoan_${activeZoanSubtype.toLowerCase()}` as TranslationKey)}`
                         : ""}
                 </span>
-                <h1 className={styles.title}>{fruit.names.japanese}</h1>
-                <p className={styles.subtitle}>
-                    {lang === "fr" ? fruit.names.french : fruit.names.english}
+
+                {/* Nom japonais - change en fonction du revealed */}
+                <h1 className={`${styles.title} ${revealed ? styles.textBounce : ""}`}>
+                    {revealed && fruit.aka ? fruit.aka.names.japanese : fruit.names.japanese}
+                </h1>
+
+                {/* Nom FR/EN - change en fonction du revealed */}
+                <p
+                    className={`${styles.subtitle} ${revealed ? styles.textBounce : ""}`}
+                    key={`sub-${revealed}`}
+                >
+                    {revealed && fruit.aka
+                        ? lang === "fr" ? fruit.aka.names.french : fruit.aka.names.english
+                        : lang === "fr" ? fruit.names.french : fruit.names.english}
                 </p>
                 <p className={styles.subtitleSecondary}>
-                    {lang === "fr" ? fruit.names.english : fruit.names.french}
+                    {revealed && fruit.aka
+                        ? lang === "fr" ? fruit.aka.names.english : fruit.aka.names.french
+                        : lang === "fr" ? fruit.names.english : fruit.names.french}
                 </p>
 
                 {fruit.aka && <AkaToggle aka={fruit.aka} />}
             </div>
 
-            {/* Contenu */}
             <div className={styles.grid}>
 
-                {/* Capacités */}
-                <div className={styles.card}>
+                {/* Capacités - change en fonction du revealed */}
+                <div className={`${styles.card} ${revealed ? styles.cardBounce : ""}`}>
                     <h2 className={styles.cardTitle}>{t("detail_abilities")}</h2>
                     <p className={styles.cardText}>
-                        {lang === "fr" ? fruit.abilities.fr : fruit.abilities.en}
+                        {lang === "fr" ? activeAbilities.fr : activeAbilities.en}
                     </p>
                 </div>
 
-                {/* Infos */}
-                <div className={styles.card}>
+                {/* Infos - change en fonction du revealed */}
+                <div className={`${styles.card} ${revealed ? styles.cardBounce : ""}`}>
                     <h2 className={styles.cardTitle}>{t("detail_info")}</h2>
                     <div className={styles.infoRow}>
                         <span className={styles.infoLabel}>{t("detail_status")}</span>
@@ -65,11 +88,15 @@ export default function FruitDetail({ fruit }: Props) {
                     </div>
                     <div className={styles.infoRow}>
                         <span className={styles.infoLabel}>{t("detail_chapter")}</span>
-                        <span className={styles.infoValue}>Ch. {fruit.firstAppearance.chapter}</span>
+                        <span className={styles.infoValue}>
+                            Ch. {revealed && fruit.aka ? fruit.aka.firstAppearance.chapter : fruit.firstAppearance.chapter}
+                        </span>
                     </div>
                     <div className={styles.infoRow}>
                         <span className={styles.infoLabel}>{t("detail_arc")}</span>
-                        <span className={styles.infoValue}>{fruit.firstAppearance.arc}</span>
+                        <span className={styles.infoValue}>
+                            {revealed && fruit.aka ? fruit.aka.firstAppearance.arc : fruit.firstAppearance.arc}
+                        </span>
                     </div>
                     {fruit.element && (
                         <div className={styles.infoRow}>
@@ -116,5 +143,13 @@ export default function FruitDetail({ fruit }: Props) {
 
             </div>
         </main>
+    )
+}
+
+export default function FruitDetail({ fruit }: Props) {
+    return (
+        <AkaProvider>
+            <FruitDetailContent fruit={fruit} />
+        </AkaProvider>
     )
 }

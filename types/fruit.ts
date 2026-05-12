@@ -26,6 +26,17 @@ export type DevilFruit = {
   names: FruitNames
   aka?: {
     names: FruitNames
+    type: FruitType
+    zoanSubtype: ZoanSubtype
+    abilities: {
+      fr: string
+      en: string
+    }
+    element?: {
+      fr: string
+      en: string
+    },
+    firstAppearance: FruitAppearance,
     revealedChapter: number
     spoiler: boolean
   }

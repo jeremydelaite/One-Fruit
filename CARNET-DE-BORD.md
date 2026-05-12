@@ -92,13 +92,23 @@
 - Compteur de résultats mis à jour en temps réel
 - Tout le système bilingue FR/EN
 
+### 12/05/2026 — Transformation fiche Nika
+
+- Ajout de `type`, `zoanSubtype`, `abilities`, `element` et `firstAppearance` dans le type `aka`
+- Création de `AkaContext` pour partager l'état `revealed` entre `AkaToggle` et `FruitDetail`
+- Quand le spoiler est révélé sur la fiche Gomu Gomu :
+  - Badge passe de `Paramecia` à `Zoan — Mythique`
+  - Titre japonais, noms FR/EN se transforment vers le Nika
+  - Capacités et informations (chapitre, arc, élément) se mettent à jour
+  - Animations rebond sur badge, titre, carte capacités et carte informations
+- Suppression de la mini-card de révélation dans `AkaToggle` — le bouton seul suffit
+
 ## Prochaines étapes 
 
 - Mettre en place une 404 (à définir le style)
 - Message quand la recherche abouti à aucun fruit
 - Tester le responsive mobile/tablette
 - Ajout de fruits, définir la méthode d'ajout (création d'une API ???)
-- Etoffer la card du spoiler du Gum Gum SPOILER
 - Ajout d'un mode spoiler dans la recherche
 - title dynamique avec nom du fruit 
 - Page utilisateurs de fruit du démon ? 

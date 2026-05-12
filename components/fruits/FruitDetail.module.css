@@ -200,3 +200,58 @@
         font-size: 1.8rem;
     }
 }
+
+/* Animations rebond / BOUNCE */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15) rotate(-2deg);
+    }
+
+    50% {
+        transform: scale(0.92) rotate(1deg);
+    }
+
+    75% {
+        transform: scale(1.06) rotate(-1deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(-10px);
+    }
+
+    50% {
+        transform: scale(1.1) translateY(4px);
+    }
+
+    75% {
+        transform: scale(0.95) translateY(-2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.badgeBounce {
+    animation: bounce 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+.textBounce {
+    animation: bounceIn 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+.cardBounce {
+    animation: bounceIn 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
