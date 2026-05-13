@@ -128,13 +128,15 @@
 - Suppression de `TitleUpdater` — titre géré statiquement côté serveur
 - Page d'accueil : titre principal devient le nom de l'encyclopédie FR/EN, "One Fruit" réservé à la navbar et au title
 
+- Navbar masquée au scroll vers le bas, réapparaît au scroll vers le haut
+- Fix navbar mobile : "One Fruit" reste sur une ligne
+
 ## à faire en priorité ! 
 
-- Tester le responsive mobile/tablette
+- Ajout de fruits, définir la méthode d'ajout (création d'une API ???) 
 
 ## Prochaines étapes 
 
-- Ajout de fruits, définir la méthode d'ajout (création d'une API ???) 
 - Page utilisateurs de fruit du démon ? 
 
 ---

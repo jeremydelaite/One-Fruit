@@ -9,6 +9,11 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.navbarHidden {
+  transform: translateY(-100%);
 }
 
 .logo {
@@ -61,4 +66,20 @@
   color: var(--color-gold-light);
   background: var(--color-bg-tertiary);
   border-color: var(--color-border-gold-subtle);
+}
+
+@media (max-width: 640px) {
+  .logoText {
+    font-size: 14px;
+  }
+
+  .logoImage {
+    width: 48px;
+    height: 48px;
+  }
+
+  .navbar {
+    height: 70px;
+    padding: 0 1rem;
+  }
 }
