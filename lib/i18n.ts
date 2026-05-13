@@ -44,6 +44,14 @@ export const translations = {
         filter_paramecia: "Paramecia",
         filter_zoan: "Zoan",
         filter_logia: "Logia",
+
+        // 404 
+        not_found_title: "Fruit introuvable",
+        not_found_subtitle: "Ce fruit du démon est introuvable... Peut-être un coup du gouvernement ?",
+        not_found_quote: "« Les ponéglyphes ne mentent pas... mais cette page, elle, n'existe pas. »",
+        not_found_btn: "Retourner à l'encyclopédie",
+        empty_search: "Aucun fruit correspondant n'a été trouvé dans nos archives...",
+
     },
     en: {
         // Navbar
@@ -88,6 +96,13 @@ export const translations = {
         filter_paramecia: "Paramecia",
         filter_zoan: "Zoan",
         filter_logia: "Logia",
+
+        // 404
+        not_found_title: "Fruit not found",
+        not_found_subtitle: "This Devil Fruit is nowhere to be found... Perhaps the World Government is involved?",
+        not_found_quote: "\"The Poneglyphs never lie... but this page, it doesn't exist.\"",
+        not_found_btn: "Back to the encyclopedia",
+        empty_search: "No matching fruit was found in our archives...",
     },
 } as const
 

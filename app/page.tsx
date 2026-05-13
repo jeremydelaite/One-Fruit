@@ -53,7 +53,7 @@ export default function Home() {
 
       {fruits.length === 0 && (
         <p className={styles.empty}>
-          Aucun fruit correspondant n&apos;a été trouvé dans nos archives...
+          {t("empty_search")}
         </p>
       )}
     </main>

@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
+import { useLang } from "@/lib/LangContext";
 import styles from "./not-found.module.css"
 
 export default function NotFound() {
+    const { t } = useLang()
+
     return (
         <main className={styles.main}>
             <div className={styles.card}>
@@ -17,21 +22,18 @@ export default function NotFound() {
                     />
                 </div>
 
-                <h1 className={styles.title}>Fruit introuvable</h1>
-                <p className={styles.subtitle}>
-                    Ce fruit du démon est introuvable...<br />
-                    Peut-être un coup du gouvernement&nbsp;?
-                </p>
+                <h1 className={styles.title}>{t("not_found_title")}</h1>
+                <p className={styles.subtitle}>{t("not_found_subtitle")}</p>
 
                 <div className={styles.divider} />
 
                 <blockquote className={styles.quote}>
-                    &ldquo;Les ponéglyphes ne mentent pas... mais cette page, elle, n&apos;existe pas.&rdquo;
+                    {t("not_found_quote")}
                     <span className={styles.quoteAuthor}>— Nico Robin</span>
                 </blockquote>
 
                 <Link href="/" className={styles.btn}>
-                    Retourner à l&apos;encyclopédie
+                    {t("not_found_btn")}
                 </Link>
 
             </div>

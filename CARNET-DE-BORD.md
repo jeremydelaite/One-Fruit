@@ -120,15 +120,17 @@
 - `SpoilerToggle` intégré dans `FilterBar` pour rester fixe quelque soit le filtre actif
 - Message "aucun fruit trouvé" sur la page d'accueil quand la recherche n'aboutit pas
 
-## à faire ! 
+- Traduction de la page 404 et du message de recherche vide via `t()` (`not_found_title`, `not_found_subtitle`, `not_found_quote`, `not_found_btn`, `empty_search`)
+- `not-found.tsx` passé en `"use client"` pour pouvoir utiliser `useLang()`
 
-- Ajouter la version anglaise de la page 404 et pour le message quand la recherche n'aboutit pas
+## à faire en priorité ! 
+
+- title dynamique avec nom du fruit
 
 ## Prochaines étapes 
 
 - Tester le responsive mobile/tablette
-- Ajout de fruits, définir la méthode d'ajout (création d'une API ???)
-- title dynamique avec nom du fruit 
+- Ajout de fruits, définir la méthode d'ajout (création d'une API ???) 
 - Page utilisateurs de fruit du démon ? 
 
 ---
