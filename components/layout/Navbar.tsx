@@ -27,7 +27,7 @@ export default function Navbar() {
           className={styles.logoImage}
         />
         <span className={styles.logoText}>
-          {t("home_title")}
+          One Fruit
         </span>
       </Link>
 

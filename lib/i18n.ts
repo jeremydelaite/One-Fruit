@@ -8,7 +8,7 @@ export const translations = {
 
         // Page d'accueil
         card_user: "Utilisateur",
-        home_title: "Encyclopédie des Fruits du Démon",
+        home_encyclopedia_title: "Encyclopédie des Fruits du Démon",
         home_subtitle: "fruits répertoriés",
         home_search: "Rechercher un fruit, un utilisateur...",
         home_filter_all: "Tous",
@@ -60,7 +60,7 @@ export const translations = {
 
         // Page d'accueil
         card_user: "User",
-        home_title: "Devil Fruit Encyclopedia",
+        home_encyclopedia_title: "Devil Fruit Encyclopedia",
         home_subtitle: "fruits listed",
         home_search: "Search a fruit, a user...",
         home_filter_all: "All",

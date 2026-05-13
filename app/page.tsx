@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>{t("home_title")}</h1>
+      <h1 className={styles.title}>{t("home_encyclopedia_title")}</h1>
       <p className={styles.subtitle}>{fruits.length} {t("home_subtitle")}</p>
 
       <div className={styles.controls}>

@@ -123,13 +123,17 @@
 - Traduction de la page 404 et du message de recherche vide via `t()` (`not_found_title`, `not_found_subtitle`, `not_found_quote`, `not_found_btn`, `empty_search`)
 - `not-found.tsx` passé en `"use client"` pour pouvoir utiliser `useLang()`
 
+- Renommage du projet en **One Fruit**
+- Titre dynamique dans l'onglet : `Mera Mera no Mi | One Fruit` via `generateMetadata`
+- Suppression de `TitleUpdater` — titre géré statiquement côté serveur
+- Page d'accueil : titre principal devient le nom de l'encyclopédie FR/EN, "One Fruit" réservé à la navbar et au title
+
 ## à faire en priorité ! 
 
-- title dynamique avec nom du fruit
+- Tester le responsive mobile/tablette
 
 ## Prochaines étapes 
 
-- Tester le responsive mobile/tablette
 - Ajout de fruits, définir la méthode d'ajout (création d'une API ???) 
 - Page utilisateurs de fruit du démon ? 
 
