@@ -1,12 +1,11 @@
-import { fruits } from "@/data/fruits"
 import type { DevilFruit } from "@/types/fruit"
 
-export function getAllFruitsWithAka(showSpoilers: boolean): DevilFruit[] {
-    const base = fruits.filter((f) => showSpoilers || !f.spoiler)
+export function getAllFruitsWithAka(showSpoilers: boolean, source: DevilFruit[]): DevilFruit[] {
+    const base = source.filter((f) => showSpoilers || !f.spoiler)
 
     if (!showSpoilers) return base
 
-    const akaFruits: DevilFruit[] = fruits
+    const akaFruits: DevilFruit[] = source
         .filter((f) => f.aka && f.aka.spoiler)
         .map((f) => ({
             id: `${f.id}?revealed=true`,

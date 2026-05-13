@@ -131,12 +131,23 @@
 - Navbar masquée au scroll vers le bas, réapparaît au scroll vers le haut
 - Fix navbar mobile : "One Fruit" reste sur une ligne
 
-## à faire en priorité ! 
+## Migration Supabase
 
-- Ajout de fruits, définir la méthode d'ajout (création d'une API ???) 
+- Mise en place de Supabase (PostgreSQL) comme base de données
+- Création des tables `fruits` et `fruit_users` avec foreign key
+- Import des 10 fruits et 12 utilisateurs
+- Création de `lib/supabase.ts` : client Supabase
+- Création de `lib/types/supabase.ts` : types des rows DB
+- Création de `lib/queries/fruits.ts` : `fetchAllFruits`, `fetchFruitById`
+- Création de `lib/queries/mappers.ts` : mapping Row => DevilFruit
+- Pattern Server/Client Component : `page.tsx` fetch les données, `HomeClient.tsx` gère l'interactivité
+- `filterFruits` et `getAllFruitsWithAka` refactorisés pour accepter `initialFruits` en paramètre
+- Suppression des imports JSON local sur les pages principales
 
 ## Prochaines étapes 
 
+- Alimenter la BDD
+- filtrage par ordre d'apparition dans le manga, ordre alphabéthique...
 - Page utilisateurs de fruit du démon ? 
 
 ---
