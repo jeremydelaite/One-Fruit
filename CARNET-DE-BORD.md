@@ -110,12 +110,24 @@
 - Animation de flottement sur l'image
 - Bouton retour vers l'encyclopédie
 
+### 13/05/2026 — Système spoiler & améliorations
+
+- Création de `lib/SpoilerContext.tsx` : context global pour le mode spoiler persisté en localStorage
+- Création de `lib/fruitUtils.ts` : extraction dynamique des fruits `aka` pour la page d'accueil
+- Toggle Spoilers : affiche/masque la carte Nika sur la page d'accueil sans doublon dans les données
+- Clic sur la carte Nika redirige vers la fiche Gomu Gomu avec `?revealed=true` — page déjà en mode révélé
+- `AkaContext` lit le query param `?revealed=true` au montage via `useSearchParams`
+- `SpoilerToggle` intégré dans `FilterBar` pour rester fixe quelque soit le filtre actif
+- Message "aucun fruit trouvé" sur la page d'accueil quand la recherche n'aboutit pas
+
+## à faire ! 
+
+- Ajouter la version anglaise de la page 404 et pour le message quand la recherche n'aboutit pas
+
 ## Prochaines étapes 
 
-- Message quand la recherche abouti à aucun fruit
 - Tester le responsive mobile/tablette
 - Ajout de fruits, définir la méthode d'ajout (création d'une API ???)
-- Ajout d'un mode spoiler dans la recherche
 - title dynamique avec nom du fruit 
 - Page utilisateurs de fruit du démon ? 
 

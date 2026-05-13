@@ -1,6 +1,7 @@
 "use client"
 
 import { createContext, useContext, useState } from "react"
+import { useSearchParams } from "next/navigation"
 
 type AkaContextType = {
     revealed: boolean
@@ -9,14 +10,18 @@ type AkaContextType = {
 
 const AkaContext = createContext<AkaContextType>({
     revealed: false,
-    setRevealed: () => {},
-}) 
+    setRevealed: () => { },
+})
 
 export function AkaProvider({ children }: { children: React.ReactNode }) {
-    const [revealed, setRevealed] = useState(false)
+    const searchParams = useSearchParams()
+    const [revealed, setRevealed] = useState(
+        searchParams.get("revealed") === "true"
+    )
+    
 
     return (
-        <AkaContext.Provider value={{ revealed, setRevealed}}>
+        <AkaContext.Provider value={{ revealed, setRevealed }}>
             {children}
         </AkaContext.Provider>
     )

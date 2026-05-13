@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { getFruitById, getAllFruits } from "@/lib/fruits"
 import { notFound } from "next/navigation"
 import FruitDetail from "@/components/fruits/FruitDetail"
@@ -17,5 +18,10 @@ export default async function FruitPage({ params }: Props) {
 
   if (!fruit) notFound()
 
-  return <FruitDetail fruit={fruit} />
+  // Suspense permet à Next.js de gérer le chargement de useSearchParams sans planter l'application.
+  return (
+    <Suspense fallback={null}>
+      <FruitDetail fruit={fruit} />
+    </Suspense>
+  )
 }

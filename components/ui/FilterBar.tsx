@@ -3,6 +3,9 @@
 import { useLang } from "@/lib/LangContext"
 import type { FruitType, ZoanSubtype } from "@/types/fruit"
 import type { TranslationKey } from "@/lib/i18n"
+
+import SpoilerToggle from "./SpoilerToggle"
+
 import styles from "./FilterBar.module.css"
 
 type Props = {
@@ -50,6 +53,7 @@ export default function FilterBar({
                         {t(labelKey)}
                     </button>
                 ))}
+                <SpoilerToggle />
             </div>
 
             {selectedType === "Zoan" && (

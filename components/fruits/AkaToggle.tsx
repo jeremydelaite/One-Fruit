@@ -11,7 +11,7 @@ type Props = {
 
 export default function AkaToggle({ aka }: Props) {
     const { revealed, setRevealed } = useAka()
-    const { t, lang } = useLang()
+    const { t } = useLang()
 
     return (
         <div className={styles.wrapper}>

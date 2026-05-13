@@ -1,5 +1,6 @@
 import { fruits } from "@/data/fruits"
 import type { DevilFruit, FruitType, ZoanSubtype } from "@/types/fruit"
+import { getAllFruitsWithAka } from "./fruitUtils"
 
 export function getAllFruits(): DevilFruit[] {
   return fruits
@@ -17,14 +18,17 @@ export function filterFruits({
   query = "",
   type = "all",
   zoanSubtype = "all",
+  showSpoilers = false,
 }: {
   query?: string
   type?: FruitType | "all"
   zoanSubtype?: ZoanSubtype | "all"
+  showSpoilers?: boolean
 }): DevilFruit[] {
   const q = query.toLowerCase().trim()
+  const source = getAllFruitsWithAka(showSpoilers)
 
-  return fruits.filter((f) => {
+  return source.filter((f) => {
     // Filtre par type
     if (type !== "all" && f.type !== type) return false
 

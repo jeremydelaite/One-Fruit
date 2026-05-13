@@ -2,6 +2,7 @@
 
 import { useLang } from "@/lib/LangContext"
 import styles from "./SearchBar.module.css"
+import Image from "next/image"
 
 type Props = {
     value: string
@@ -13,7 +14,13 @@ export default function SearchBar({ value, onChange }: Props) {
 
     return (
         <div className={styles.wrapper}>
-            <span className={styles.icon}>🔍</span>
+            <Image
+                src="/loupe.png"
+                alt="Rechercher"
+                width={20}
+                height={20}
+                className={styles.icon}
+            />
             <input
                 className={styles.input}
                 type="text"

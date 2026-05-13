@@ -24,8 +24,11 @@ export default function FruitCard({ fruit }: Props) {
   const primaryName = lang === "fr" ? fruit.names.french : fruit.names.english
   const secondaryName = lang === "fr" ? fruit.names.english : fruit.names.french
 
+  const [fruitId, query] = fruit.id.split("?")
+  const href = query ? `/fruit/${fruitId}?${query}` : `/fruit/${fruitId}`
+
   return (
-    <Link href={`/fruit/${fruit.id}`}>
+    <Link href={href}>
       <div className={styles.card}>
         <span className={`${styles.badge} ${badgeStyles[fruit.type]}`}>
           {fruit.type}

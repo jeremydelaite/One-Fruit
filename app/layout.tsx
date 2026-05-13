@@ -3,6 +3,7 @@ import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
 import TitleUpdater from "@/components/layout/TItleUpdater"
 import { LangProvider } from "@/lib/LangContext"
+import { SpoilerProvider } from "@/lib/SpoilerContext"
 
 export const metadata: Metadata = {
   title: "Devil Fruit Encyclopedia",
@@ -14,11 +15,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <body>
         <LangProvider>
-          <TitleUpdater />
-          <Navbar />
-          {children}
+          <SpoilerProvider>
+            <TitleUpdater />
+            <Navbar />
+            {children}
+          </SpoilerProvider>
         </LangProvider>
-        </body>
+      </body>
     </html>
   )
 }

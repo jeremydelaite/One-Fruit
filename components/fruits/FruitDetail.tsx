@@ -3,9 +3,10 @@
 import { useLang } from "@/lib/LangContext"
 import type { DevilFruit } from "@/types/fruit"
 import type { TranslationKey } from "@/lib/i18n"
-import styles from "./FruitDetail.module.css"
 import AkaToggle from "./AkaToggle"
 import { AkaProvider, useAka } from "./AkaContext"
+
+import styles from "./FruitDetail.module.css"
 
 type Props = {
     fruit: DevilFruit
@@ -35,7 +36,6 @@ function FruitDetailContent({ fruit }: Props) {
         <main className={styles.main}>
             <div className={styles.header}>
 
-                {/* Badge - change en fonction du revealed */}
                 <span
                     className={`${styles.badge} ${badgeClass} ${revealed ? styles.badgeBounce : ""}`}
                     key={revealed ? "aka" : "base"}
@@ -46,12 +46,10 @@ function FruitDetailContent({ fruit }: Props) {
                         : ""}
                 </span>
 
-                {/* Nom japonais - change en fonction du revealed */}
                 <h1 className={`${styles.title} ${revealed ? styles.textBounce : ""}`}>
                     {revealed && fruit.aka ? fruit.aka.names.japanese : fruit.names.japanese}
                 </h1>
 
-                {/* Nom FR/EN - change en fonction du revealed */}
                 <p
                     className={`${styles.subtitle} ${revealed ? styles.textBounce : ""}`}
                     key={`sub-${revealed}`}
@@ -71,7 +69,6 @@ function FruitDetailContent({ fruit }: Props) {
 
             <div className={styles.grid}>
 
-                {/* Capacités - change en fonction du revealed */}
                 <div className={`${styles.card} ${revealed ? styles.cardBounce : ""}`}>
                     <h2 className={styles.cardTitle}>{t("detail_abilities")}</h2>
                     <p className={styles.cardText}>
@@ -79,7 +76,6 @@ function FruitDetailContent({ fruit }: Props) {
                     </p>
                 </div>
 
-                {/* Infos - change en fonction du revealed */}
                 <div className={`${styles.card} ${revealed ? styles.cardBounce : ""}`}>
                     <h2 className={styles.cardTitle}>{t("detail_info")}</h2>
                     <div className={styles.infoRow}>
@@ -108,7 +104,6 @@ function FruitDetailContent({ fruit }: Props) {
                     )}
                 </div>
 
-                {/* Utilisateurs */}
                 <div className={`${styles.card} ${styles.cardFull}`}>
                     <h2 className={styles.cardTitle}>{t("detail_users")}</h2>
                     <div className={styles.usersList}>

@@ -2,11 +2,16 @@
 
 import { useState } from "react"
 import { filterFruits } from "@/lib/fruits"
+
 import FruitCard from "@/components/fruits/FruitCard"
 import SearchBar from "@/components/ui/SearchBar"
 import FilterBar from "@/components/ui/FilterBar"
+
 import { useLang } from "@/lib/LangContext"
+import { useSpoiler } from "@/lib/SpoilerContext"
+
 import type { FruitType, ZoanSubtype } from "@/types/fruit"
+
 import styles from "./page.module.css"
 
 export default function Home() {
@@ -14,11 +19,13 @@ export default function Home() {
   const [query, setQuery] = useState("")
   const [selectedType, setSelectedType] = useState<FruitType | "all">("all")
   const [selectedZoanSubtype, setSelectedZoanSubtype] = useState<ZoanSubtype | "all">("all")
+  const { showSpoilers } = useSpoiler()
 
   const fruits = filterFruits({
-    query, 
+    query,
     type: selectedType,
     zoanSubtype: selectedZoanSubtype,
+    showSpoilers,
   })
 
   return (
@@ -28,19 +35,27 @@ export default function Home() {
 
       <div className={styles.controls}>
         <SearchBar value={query} onChange={setQuery} />
-        <FilterBar
-          selectedType={selectedType}
-          selectedZoanSubtype={selectedZoanSubtype}
-          onTypeChange={setSelectedType}
-          onZoanSubtypeChange={setSelectedZoanSubtype}
+        <div className={styles.filtersRow}>
+          <FilterBar
+            selectedType={selectedType}
+            selectedZoanSubtype={selectedZoanSubtype}
+            onTypeChange={setSelectedType}
+            onZoanSubtypeChange={setSelectedZoanSubtype}
           />
+        </div>
       </div>
 
       <div className={styles.grid}>
-        {fruits.map((fruit) => (
-          <FruitCard key={fruit.id} fruit={fruit} />
+        {fruits.map((fruit, index) => (
+          <FruitCard key={`${fruit.id}-${index}`} fruit={fruit} />
         ))}
       </div>
+
+      {fruits.length === 0 && (
+        <p className={styles.empty}>
+          Aucun fruit correspondant n&apos;a été trouvé dans nos archives...
+        </p>
+      )}
     </main>
   )
 }

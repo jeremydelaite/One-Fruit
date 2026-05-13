@@ -29,3 +29,18 @@
   gap: 12px;
   margin-bottom: 2rem;
 }
+
+.filtersRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-text-on-dark-muted);
+  font-size: 1rem;
+}
