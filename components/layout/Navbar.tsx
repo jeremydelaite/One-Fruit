@@ -47,6 +47,7 @@ export default function Navbar() {
           width={64}
           height={64}
           className={styles.logoImage}
+          priority
         />
         <span className={styles.logoText}>
           One Fruit

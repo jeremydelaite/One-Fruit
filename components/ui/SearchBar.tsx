@@ -20,6 +20,7 @@ export default function SearchBar({ value, onChange }: Props) {
                 width={20}
                 height={20}
                 className={styles.icon}
+                priority
             />
             <input
                 className={styles.input}
