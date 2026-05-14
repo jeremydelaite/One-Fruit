@@ -18,12 +18,14 @@
 
 ## Fonctionnalités prévues
  
-- [ ] Liste complète des Fruits du Démon avec filtres (Paramecia / Zoan / Logia)
-- [ ] Fiche détaillée par fruit (nom JP / EN / FR, utilisateurs, pouvoirs)
-- [ ] Recherche en temps réel
-- [ ] Bilingue FR / EN
-- [ ] Mode sans spoiler
-- [ ] Responsive mobile + desktop
+- [x] Liste complète des Fruits du Démon avec filtres (Paramecia / Zoan / Logia)
+- [x] Fiche détaillée par fruit (nom JP / EN / FR, utilisateurs, pouvoirs)
+- [x] Recherche en temps réel
+- [x] Bilingue FR / EN
+- [x] Mode sans spoiler
+- [x] Responsive mobile + desktop
+- [ ] Filtres de recherche supplémentaire
+- [ ] Listes complète des Fruits du démon
 
 --- 
 
@@ -156,9 +158,19 @@
 - Fix VS Code : réinstallation des `node_modules` depuis Windows (store pnpm incompatible WSL/Windows)
 - Ajout de `priority` sur les images navbar et loupe pour corriger les warnings LCP
 
+## En cours le 15/05/2026
+
+- Alimentation de la base de données Supabase, nombre de fruits total ajoutés : 62
+- Logia 13/13
+- Zoan : 
+  - Classique : 24/24
+  - Antique : 9/9
+  - Mythique : 12/12
+  - Artificiel : 0
+- Paramecia : 4
+
 ## Prochaines étapes 
 
-- Alimenter la BDD
 - filtrage par ordre d'apparition dans le manga, ordre alphabéthique...
 - Page utilisateurs de fruit du démon ? 
 
