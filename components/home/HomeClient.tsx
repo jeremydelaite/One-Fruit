@@ -1,18 +1,17 @@
 "use client"
 
 import { useState } from "react"
-import { filterFruits } from "@/lib/fruits"
-
+import { filterFruits } from "@/lib/utils/filterFruits"
 import FruitCard from "@/components/fruits/FruitCard"
 import SearchBar from "@/components/ui/SearchBar"
 import FilterBar from "@/components/ui/FilterBar"
 
-import { useLang } from "@/lib/LangContext"
-import { useSpoiler } from "@/lib/SpoilerContext"
+import { useLang } from "@/lib/i18n/LangContext"
+import { useSpoiler } from "@/lib/i18n/SpoilerContext"
 
 import type { DevilFruit, FruitType, ZoanSubtype } from "@/types/fruit"
 
-import styles from "./page.module.css"
+import styles from "./HomeClient.module.css"
 
 type Props = {
   initialFruits: DevilFruit[]

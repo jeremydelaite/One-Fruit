@@ -1,5 +1,5 @@
-import { fetchAllFruits } from "@/lib/queries/fruits"
-import HomeClient from "@/app/HomeClient"
+import { fetchAllFruits } from "@/lib/queries"
+import HomeClient from "@/components/home/HomeClient"
 
 export default async function Home() {
   const fruits = await fetchAllFruits()

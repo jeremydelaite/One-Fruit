@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
-import { LangProvider } from "@/lib/LangContext"
-import { SpoilerProvider } from "@/lib/SpoilerContext"
+import { LangProvider } from "@/lib/i18n/LangContext"
+import { SpoilerProvider } from "@/lib/i18n/SpoilerContext"
 
 export const metadata: Metadata = {
   title: "One Fruit",

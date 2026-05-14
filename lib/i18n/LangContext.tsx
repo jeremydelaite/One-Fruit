@@ -1,8 +1,8 @@
 "use client"
 
 import { createContext, useContext, useState, useSyncExternalStore } from "react"
-import type { Lang } from "./i18n"
-import { translations, type TranslationKey } from "./i18n"
+import type { Lang } from "."
+import { translations, type TranslationKey } from "."
 
 type LangContextType = {
     lang: Lang

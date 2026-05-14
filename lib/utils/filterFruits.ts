@@ -1,5 +1,5 @@
 import type { DevilFruit, FruitType, ZoanSubtype } from "@/types/fruit"
-import { getAllFruitsWithAka } from "./fruitUtils"
+import { getAllFruitsWithAka } from "@/lib/utils/fruitUtils"
 
 export function filterFruits({
   query = "",

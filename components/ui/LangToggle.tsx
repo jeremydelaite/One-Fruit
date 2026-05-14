@@ -1,6 +1,6 @@
 "use client"
 
-import { useLang } from "@/lib/LangContext"
+import { useLang } from "@/lib/i18n/LangContext"
 import styles from "./LangToggle.module.css"
 
 export default function LangToggle() {

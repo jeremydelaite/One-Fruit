@@ -3,7 +3,7 @@
 import Link from "next/link"
 import type { DevilFruit } from "@/types/fruit"
 import type { TranslationKey } from "@/lib/i18n"
-import { useLang } from "@/lib/LangContext"
+import { useLang } from "@/lib/i18n/LangContext"
 import styles from "./FruitCard.module.css"
 
 type Props = {

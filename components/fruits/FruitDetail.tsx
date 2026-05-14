@@ -1,6 +1,6 @@
 "use client"
 
-import { useLang } from "@/lib/LangContext"
+import { useLang } from "@/lib/i18n/LangContext"
 import type { DevilFruit } from "@/types/fruit"
 import type { TranslationKey } from "@/lib/i18n"
 import AkaToggle from "./AkaToggle"

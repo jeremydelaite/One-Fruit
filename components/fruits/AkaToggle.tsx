@@ -1,6 +1,6 @@
 "use client"
 
-import { useLang } from "@/lib/LangContext"
+import { useLang } from "@/lib/i18n/LangContext"
 import { useAka } from "./AkaContext"
 import type { DevilFruit } from "@/types/fruit"
 import styles from "./AkaToggle.module.css"

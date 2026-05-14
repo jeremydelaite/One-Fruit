@@ -1,6 +1,6 @@
 "use client"
 
-import { useSpoiler } from "@/lib/SpoilerContext"
+import { useSpoiler } from "@/lib/i18n/SpoilerContext"
 import styles from "./SpoilerToggle.module.css"
 
 export default function SpoilerToggle() {

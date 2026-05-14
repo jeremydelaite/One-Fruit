@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useLang } from "@/lib/LangContext";
+import { useLang } from "@/lib/i18n/LangContext";
 import styles from "./not-found.module.css"
 
 export default function NotFound() {

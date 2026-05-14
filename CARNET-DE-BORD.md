@@ -3,13 +3,15 @@
 
 --- 
 ## Stack technique
- 
+
 | Technologie | Version | Rôle |
 |---|---|---|
 | Next.js | 16.x | Framework React (App Router, SSG) |
 | React | 19.x | UI |
 | TypeScript | 5.x | Typage statique |
-| Tailwind CSS | 4.x | Styles |
+| Tailwind CSS | 4.x | Styles de base / reset |
+| CSS Modules | — | Styles composants (choix architectural) |
+| Supabase | — | Base de données PostgreSQL + API REST |
 | pnpm | 10.x | Gestionnaire de paquets |
 
 --- 
@@ -142,7 +144,17 @@
 - Création de `lib/queries/mappers.ts` : mapping Row => DevilFruit
 - Pattern Server/Client Component : `page.tsx` fetch les données, `HomeClient.tsx` gère l'interactivité
 - `filterFruits` et `getAllFruitsWithAka` refactorisés pour accepter `initialFruits` en paramètre
-- Suppression des imports JSON local sur les pages principales
+
+### 14/05/2026 — Refactorisation & nettoyage
+
+- Suppression des données en dur (`data/fruits.ts`) — Supabase est la seule source de données
+- Réorganisation de `lib/` en sous-dossiers :
+  - `lib/utils/` → `filterFruits.ts` et `fruitUtils.ts`
+  - `lib/queries/` → `fruits.ts`, `mappers.ts` et `index.ts` 
+  - `lib/i18n/` → `index.ts` (anciennement i18n.ts), `LangContext.tsx`, `SpoilerContext.tsx`
+- `HomeClient.tsx` déplacé dans `components/home/`
+- Fix VS Code : réinstallation des `node_modules` depuis Windows (store pnpm incompatible WSL/Windows)
+- Ajout de `priority` sur les images navbar et loupe pour corriger les warnings LCP
 
 ## Prochaines étapes 
 

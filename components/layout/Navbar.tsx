@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 import { usePathname } from "next/navigation"
-import { useLang } from "@/lib/LangContext"
+import { useLang } from "@/lib/i18n/LangContext"
 import LangToggle from "@/components/ui/LangToggle"
 
 import styles from "./Navbar.module.css"

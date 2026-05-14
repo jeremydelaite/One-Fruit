@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { fetchFruitById, fetchAllFruits } from "@/lib/queries/fruits"
+import { fetchFruitById, fetchAllFruits } from "@/lib/queries"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import FruitDetail from "@/components/fruits/FruitDetail"
