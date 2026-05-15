@@ -3,6 +3,7 @@ import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
 import { LangProvider } from "@/lib/i18n/LangContext"
 import { SpoilerProvider } from "@/lib/i18n/SpoilerContext"
+import ScrollToTop from "@/components/ui/ScrollToTop"
 
 export const metadata: Metadata = {
   title: "One Fruit",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SpoilerProvider>
             <Navbar />
             {children}
+            <ScrollToTop />
           </SpoilerProvider>
         </LangProvider>
       </body>

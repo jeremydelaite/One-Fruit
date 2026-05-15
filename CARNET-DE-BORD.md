@@ -158,7 +158,11 @@
 - Fix VS Code : réinstallation des `node_modules` depuis Windows (store pnpm incompatible WSL/Windows)
 - Ajout de `priority` sur les images navbar et loupe pour corriger les warnings LCP
 
-## En cours le 15/05/2026
+### 15/05/2026 — UI & améliorations
+
+- Ajout d'un bouton "retour en haut" fixe en bas à droite (`ScrollToTop`) — apparaît après un écran de scroll, disparaît en haut de page
+
+## En cours
 
 - Alimentation de la base de données Supabase, nombre de fruits total ajoutés : 62
 - Logia 13/13
@@ -171,7 +175,10 @@
 
 ## Prochaines étapes 
 
-- filtrage par ordre d'apparition dans le manga, ordre alphabéthique...
+- Responsive mobile page d'accueil carte fruit du démon plus petite 2 par par ligne 
+- Ajout d'un Footer
+- Filtrage par ordre d'apparition dans le manga, ordre alphabéthique...
+- Fruit Random page d'accueil 
 - Page utilisateurs de fruit du démon ? 
 
 ---
