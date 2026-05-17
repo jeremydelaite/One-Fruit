@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-on-dark-muted);
+    font-family: var(--font-sans);
+    white-space: nowrap;
+}
+
+.select {
+    background: var(--color-bg-secondary);
+    border: 1.5px solid var(--color-border-gold-subtle);
+    border-radius: var(--radius-sm);
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: var(--font-sans);
+    color: var(--color-text-on-dark);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.select:hover,
+.select:focus {
+    border-color: var(--color-gold);
+}

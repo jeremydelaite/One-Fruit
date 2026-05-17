@@ -1,5 +1,8 @@
 import type { DevilFruit, FruitType, ZoanSubtype } from "@/types/fruit"
+import type { SortOption } from "@/components/ui/SortSelect"
+
 import { getAllFruitsWithAka } from "@/lib/utils/fruitUtils"
+
 
 export function filterFruits({
   query = "",
@@ -38,4 +41,23 @@ export function filterFruits({
 
     return true
   })
+}
+
+export function sortFruits(fruits: DevilFruit[], sort: SortOption, lang: string): DevilFruit[] {
+  const sorted = [...fruits]
+
+  switch (sort) {
+    case "alpha":
+      return sorted.sort((a, b) => 
+        lang === "fr"
+          ? a.names.french.localeCompare(b.names.french)
+          : a.names.english.localeCompare(b.names.english)
+        )
+    case "chapter_asc":
+      return sorted.sort((a, b) => a.firstAppearance.chapter - b.firstAppearance.chapter)
+    case "chapter_desc":
+      return sorted.sort((a, b) => b.firstAppearance.chapter - a.firstAppearance.chapter)
+    default:
+      return sorted
+  }
 }

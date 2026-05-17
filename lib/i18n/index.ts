@@ -70,6 +70,13 @@ export const translations = {
         contact_submit: "Envoyer",
         contact_success: "Message envoyé ! Merci pour votre contribution.",
         contact_error: "Une erreur est survenue, réessayez.",
+
+        // Trier par 
+        sort_label: "Trier par",
+        sort_default: "Par défaut",
+        sort_alpha: "A → Z",
+        sort_chapter_asc: "Chapitre croissant",
+        sort_chapter_desc: "Chapitre décroissant",
     },
     en: {
         // Navbar
@@ -128,7 +135,7 @@ export const translations = {
         footer_copy: "© 2026 One Fruit — Fan-made project, not affiliated with Eiichiro Oda or Toei Animation.",
 
         // Contact 
-        contact_home: "Home", 
+        contact_home: "Home",
         contact_title: "Contact us",
         contact_subtitle: "An error, a missing fruit, a suggestion? We're listening.",
         contact_email: "Your email",
@@ -140,6 +147,13 @@ export const translations = {
         contact_submit: "Send",
         contact_success: "Message sent! Thank you for your contribution.",
         contact_error: "An error occurred, please try again.",
+
+        // Trier par 
+        sort_label: "Sort by",
+        sort_default: "Default",
+        sort_alpha: "A → Z",
+        sort_chapter_asc: "Chapter ascending",
+        sort_chapter_desc: "Chapter descending",
     },
 } as const
 

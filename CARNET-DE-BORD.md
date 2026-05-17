@@ -193,7 +193,6 @@
 
 ## Prochaines étapes 
 
-- Filtrage par ordre d'apparition dans le manga, ordre alphabéthique...
 - Fruit Random page d'accueil 
 - Page utilisateurs de fruit du démon ? 
 

@@ -6,6 +6,9 @@ import FruitCard from "@/components/fruits/FruitCard"
 import SearchBar from "@/components/ui/SearchBar"
 import FilterBar from "@/components/ui/FilterBar"
 
+import SortSelect, { SortOption } from "../ui/SortSelect"
+import { sortFruits } from "@/lib/utils/filterFruits"
+
 import { useLang } from "@/lib/i18n/LangContext"
 import { useSpoiler } from "@/lib/i18n/SpoilerContext"
 
@@ -18,19 +21,15 @@ type Props = {
 }
 
 export default function HomeClient({ initialFruits }: Props) {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const { showSpoilers } = useSpoiler()
   const [query, setQuery] = useState("")
   const [selectedType, setSelectedType] = useState<FruitType | "all">("all")
   const [selectedZoanSubtype, setSelectedZoanSubtype] = useState<ZoanSubtype | "all">("all")
+  const [sort, setSort] = useState<SortOption>("default")
 
-  const fruits = filterFruits({
-    query,
-    type: selectedType,
-    zoanSubtype: selectedZoanSubtype,
-    showSpoilers,
-    initialFruits,
-  })
+  const filtered = filterFruits({ query, type: selectedType, zoanSubtype: selectedZoanSubtype, showSpoilers, initialFruits })
+  const fruits = sortFruits(filtered, sort, lang)
 
   return (
     <main className={styles.main}>
@@ -46,6 +45,9 @@ export default function HomeClient({ initialFruits }: Props) {
             onTypeChange={setSelectedType}
             onZoanSubtypeChange={setSelectedZoanSubtype}
           />
+        <div>
+          <SortSelect value={sort} onChange={setSort} />
+        </div>
         </div>
       </div>
 
