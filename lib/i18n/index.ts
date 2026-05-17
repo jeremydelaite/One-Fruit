@@ -52,6 +52,24 @@ export const translations = {
         not_found_btn: "Retourner à l'encyclopédie",
         empty_search: "Aucun fruit correspondant n'a été trouvé dans nos archives...",
 
+        // Footer
+        footer_desc: "Encyclopédie des Fruits du Démon de One Piece",
+        footer_contact: "Contact",
+        footer_copy: "© 2026 One Fruit — Projet fan-made, non affilié à Eiichiro Oda ou Toei Animation.",
+
+        // Contact 
+        contact_home: "Accueil",
+        contact_title: "Nous contacter",
+        contact_subtitle: "Une erreur, un fruit manquant, une suggestion ? On est à l'écoute.",
+        contact_email: "Votre email",
+        contact_subject: "Sujet",
+        contact_subject_placeholder: "Choisir un sujet...",
+        contact_message: "Message",
+        contact_chars: "caratères",
+        contact_message_placeholder: "Décrivez votre demande...",
+        contact_submit: "Envoyer",
+        contact_success: "Message envoyé ! Merci pour votre contribution.",
+        contact_error: "Une erreur est survenue, réessayez.",
     },
     en: {
         // Navbar
@@ -103,6 +121,25 @@ export const translations = {
         not_found_quote: "\"The Poneglyphs never lie... but this page, it doesn't exist.\"",
         not_found_btn: "Back to the encyclopedia",
         empty_search: "No matching fruit was found in our archives...",
+
+        // Footer
+        footer_desc: "One Piece Devil Fruit Encyclopedia",
+        footer_contact: "Contact",
+        footer_copy: "© 2026 One Fruit — Fan-made project, not affiliated with Eiichiro Oda or Toei Animation.",
+
+        // Contact 
+        contact_home: "Home", 
+        contact_title: "Contact us",
+        contact_subtitle: "An error, a missing fruit, a suggestion? We're listening.",
+        contact_email: "Your email",
+        contact_subject: "Subject",
+        contact_subject_placeholder: "Choose a subject...",
+        contact_message: "Message",
+        contact_chars: "characters",
+        contact_message_placeholder: "Describe your request...",
+        contact_submit: "Send",
+        contact_success: "Message sent! Thank you for your contribution.",
+        contact_error: "An error occurred, please try again.",
     },
 } as const
 

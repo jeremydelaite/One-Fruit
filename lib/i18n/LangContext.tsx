@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, useSyncExternalStore } from "react"
+import { createContext, useContext, useSyncExternalStore } from "react"
 import type { Lang } from "."
 import { translations, type TranslationKey } from "."
 

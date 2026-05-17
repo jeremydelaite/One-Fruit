@@ -162,6 +162,17 @@
 
 - Ajout d'un bouton "retour en haut" fixe en bas à droite (`ScrollToTop`) — apparaît après un écran de scroll, disparaît en haut de page
 
+### 17/05/2026 Footer & Contact
+
+- Ajout du footer avec lien vers la page contact 
+- Création de la page `/contact` avec formulaire (email, sujet et message)
+- Sujets prédifinis (correction, fruit manquant, suggestion, bug ou autre)
+- Stockage des messages dans Supabase (table `contact`)
+- Protection contre les attaques XSS via `xss`
+- Validation email par regex
+- Limite du message caractères 20 à 1000 sur `/contact/page.tsx` avec compteur en temps réel et en SQL sur Supabase
+- Bouton d'envoi désactivé si formulaire invalide
+
 ## En cours
 
 - Alimentation de la base de données Supabase, nombre de fruits total ajoutés : 62
