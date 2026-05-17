@@ -19,8 +19,9 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 16px;
+  align-items: stretch;
 }
 
 .controls {
@@ -43,4 +44,18 @@
   font-style: italic;
   color: var(--color-text-on-dark-muted);
   font-size: 1rem;
+}
+
+/* Responsive tablette et mobile */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }

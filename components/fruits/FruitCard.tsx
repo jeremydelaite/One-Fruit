@@ -30,25 +30,29 @@ export default function FruitCard({ fruit }: Props) {
   return (
     <Link href={href}>
       <div className={styles.card}>
-        <span className={`${styles.badge} ${badgeStyles[fruit.type]}`}>
-          {fruit.type}
-          {fruit.zoanSubtype
-            ? ` — ${t(`zoan_${fruit.zoanSubtype.toLowerCase()}` as TranslationKey)}`
-            : ""}
-        </span>
+        <div>
+          <span className={`${styles.badge} ${badgeStyles[fruit.type]}`}>
+            {fruit.type}
+            {fruit.zoanSubtype
+              ? ` — ${t(`zoan_${fruit.zoanSubtype.toLowerCase()}` as TranslationKey)}`
+              : ""}
+          </span>
 
-        <p className={styles.nameJp}>{fruit.names.japanese}</p>
-        <p className={styles.nameFr}>{primaryName}</p>
-        <p className={styles.nameEn}>{secondaryName}</p>
+          <p className={styles.nameJp}>{fruit.names.japanese}</p>
+          <p className={styles.nameFr}>{primaryName}</p>
+          <p className={styles.nameEn}>{secondaryName}</p>
+        </div>
 
-        <div className={styles.divider} />
+        <div>
+          <div className={styles.divider} />
 
-        <p className={styles.userLabel}>{t("card_user")}</p>
-        <p className={styles.user}>
-          {currentUser
-            ? lang === "fr" ? currentUser.name : currentUser.nameEn
-            : t("detail_no_user")}
-        </p>
+          <p className={styles.userLabel}>{t("card_user")}</p>
+          <p className={styles.user}>
+            {currentUser
+              ? lang === "fr" ? currentUser.name : currentUser.nameEn
+              : t("detail_no_user")}
+          </p>
+        </div>
       </div>
     </Link>
   )

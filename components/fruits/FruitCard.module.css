@@ -4,6 +4,10 @@
   border-radius: var(--radius-md);
   padding: 1rem;
   height: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: transform 0.15s, border-color 0.15s, background 0.15s;
   cursor: pointer;
 }
@@ -81,4 +85,23 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .card {
+    padding: 0.75rem;
+  }
+
+  .nameJp {
+    font-size: 13px;
+  }
+
+  .nameFr {
+    font-size: 12px;
+  }
+  
+  .nameEn {
+    font-size: 10px;
+  }
 }

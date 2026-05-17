@@ -173,6 +173,13 @@
 - Limite du message caractères 20 à 1000 sur `/contact/page.tsx` avec compteur en temps réel et en SQL sur Supabase
 - Bouton d'envoi désactivé si formulaire invalide
 
+### Responsive & UI
+
+- Responsive mobile page d'accueil : 
+  - 2 cartes par ligne sur mobile
+  - 4 cartes par ligne sur tablette
+- Hauteur uniforme des cartes via flexbox
+
 ## En cours
 
 - Alimentation de la base de données Supabase, nombre de fruits total ajoutés : 62
@@ -186,8 +193,6 @@
 
 ## Prochaines étapes 
 
-- Responsive mobile page d'accueil carte fruit du démon plus petite 2 par par ligne 
-- Ajout d'un Footer
 - Filtrage par ordre d'apparition dans le manga, ordre alphabéthique...
 - Fruit Random page d'accueil 
 - Page utilisateurs de fruit du démon ? 
