@@ -180,16 +180,22 @@
   - 4 cartes par ligne sur tablette
 - Hauteur uniforme des cartes via flexbox
 
+### Tri & filtres 
+
+- Ajout d'un menu déroulant de tri : alphabétique (adapté FR/EN) et chapitre croissant/décroissant 
+- Création du composant `SortSelect` + module CSS
+- Fonction `sortFruits` dans `lib/utils/filterFruits.ts` - agit en fonction de la langue activer
+
 ## En cours
 
-- Alimentation de la base de données Supabase, nombre de fruits total ajoutés : 62
-- Logia 13/13
+- Alimentation de la base de données Supabase, nombre de fruits total : 120
+- Logia 13/13 ✅
 - Zoan : 
-  - Classique : 24/24
+  - Classique : 24/24 ✅
   - Antique : 9/9
-  - Mythique : 12/12
+  - Mythique : 12/12 ✅
   - Artificiel : 0
-- Paramecia : 4
+- Paramecia : 62/~100
 
 ## Prochaines étapes 
 
