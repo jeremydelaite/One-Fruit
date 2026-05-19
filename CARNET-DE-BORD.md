@@ -186,16 +186,21 @@
 - Création du composant `SortSelect` + module CSS
 - Fonction `sortFruits` dans `lib/utils/filterFruits.ts` - agit en fonction de la langue activer
 
+### 19/05/2026 - Fix ScrollToTop 
+
+- Fix `ScrollToTop` : le bouton remonte dynamiquement au-dessus du footer via `getBoundingClientRect()`, évitant qu'il cache des informations
+- Suppression de la transition `bottom` pour un repositionnement instantané
+
 ## En cours
 
-- Alimentation de la base de données Supabase, nombre de fruits total : 120
+- Alimentation de la base de données Supabase, nombre de fruits total : 151
 - Logia 13/13 ✅
 - Zoan : 
   - Classique : 24/24 ✅
   - Antique : 9/9
   - Mythique : 12/12 ✅
   - Artificiel : 0
-- Paramecia : 62/~100
+- Paramecia : 93
 
 ## Prochaines étapes 
 
