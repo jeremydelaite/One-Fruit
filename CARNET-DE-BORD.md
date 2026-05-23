@@ -191,21 +191,23 @@
 - Fix `ScrollToTop` : le bouton remonte dynamiquement au-dessus du footer via `getBoundingClientRect()`, évitant qu'il cache des informations
 - Suppression de la transition `bottom` pour un repositionnement instantané
 
-## En cours
-
 - Alimentation de la base de données Supabase, nombre de fruits total : 151
 - Logia 13/13 ✅
 - Zoan : 
   - Classique : 24/24 ✅
-  - Antique : 9/9
+  - Antique : 9/9 ✅
   - Mythique : 12/12 ✅
-  - Artificiel : 0
-- Paramecia : 93
+- Paramecia : 93 ✅
+
+### 22/05/2026 — Nettoyage
+
+- Retrait de la catégorie Zoan "Artificiel" du projet (type `ZoanSubtype`, filtres, traductions FR/EN)
 
 ## Prochaines étapes 
 
 - Fruit Random page d'accueil 
 - Page utilisateurs de fruit du démon ? 
+- creation d'une alternative du site version "livre" 
 
 ---
 

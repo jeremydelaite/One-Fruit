@@ -38,7 +38,6 @@ export const translations = {
         zoan_classique: "Classique",
         zoan_antique: "Antique",
         zoan_mythique: "Mythique",
-        zoan_artificiel: "Artificiel",
 
         // Filtres
         filter_paramecia: "Paramecia",
@@ -115,7 +114,6 @@ export const translations = {
         zoan_classique: "Classic",
         zoan_antique: "Ancient",
         zoan_mythique: "Mythical",
-        zoan_artificiel: "Artificial",
 
         // Filtres
         filter_paramecia: "Paramecia",

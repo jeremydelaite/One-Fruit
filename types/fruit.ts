@@ -1,6 +1,6 @@
 export type FruitType = "Paramecia" | "Zoan" | "Logia"
 
-export type ZoanSubtype = "Classique" | "Artificiel" | "Antique" | "Mythique" | null
+export type ZoanSubtype = "Classique" | "Antique" | "Mythique" | null
 
 export type FruitUser = {
   name: string

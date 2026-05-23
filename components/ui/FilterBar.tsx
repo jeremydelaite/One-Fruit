@@ -27,7 +27,6 @@ const zoanSubtypes: { value: ZoanSubtype | "all"; labelKey: TranslationKey }[] =
     { value: "Classique", labelKey: "zoan_classique" },
     { value: "Antique", labelKey: "zoan_antique" },
     { value: "Mythique", labelKey: "zoan_mythique" },
-    { value: "Artificiel", labelKey: "zoan_artificiel" },
 ]
 
 export default function FilterBar({
